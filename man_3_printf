@@ -1,4 +1,4 @@
-.TH man 3 "23 July,2023" "ALX SCHOOL" "_PRINTF"
+.TH man 3 "23 July 2023" "ALX SCHOOL" "_PRINTF"
 .SH NAME
 .B _printf
 - formatted output conversion
@@ -6,13 +6,13 @@
 .B #include \(dqmain.h\(dq
 .sp
 .B int _printf(const char *
-		.I format
-		.B , ...);
+.I format
+.B , ...);
 .SH DESCRIPTION
 The function _printf is a variadic function that produces a string according to a
 .I format
 and prints it to the standard output, much like the C standard library function printf. It can receive a variable number of arguments.
-This function has been created in the context of a Low-level Programming project for ALX Africa Full Stack Software Engineer programme.
+This function has been created in the context of a first-year project for Holberton School.
 .sp
 .B Return value
 .sp
@@ -26,8 +26,8 @@ The format string can contain any characters, just like a regular string, in dou
 However, this format string can contain
 .I conversion specifiers.
 These start with a %, and are followed with a character (see
-		.I conversion specifiers
-		). Special characters like a new line are escaped, for example _printf(\(dq\\n\(dq) will print a new line.
+.I conversion specifiers
+). Special characters like a new line are escaped, for example _printf(\(dq\\n\(dq) will print a new line.
 .sp
 .B Conversion specifiers
 .sp
@@ -79,25 +79,24 @@ base.
 .B +
 - Prints a plus sign in front of positive signed integers and a minus sign in front of negative signed integers.
  + overrides a space when both flags are given.
- .sp
- .B ' '
- - Prints a space in front of signed integers.
- .sp
- .B #
- - Modifier for unsigned conversions. For x, prepends \(dq0x\(dq, and for X, prepends \(dq0X\(dq. For o, if the converted number doesn't already begin with a 0, prepends a 0.
- .sp
- .SH SEE ALSO
- .I printf(3)
+.sp
+.B ' '
+- Prints a space in front of signed integers.
+.sp
+.B #
+- Modifier for unsigned conversions. For x, prepends \(dq0x\(dq, and for X, prepends \(dq0X\(dq. For o, if the converted number doesn't already begin with a 0, prepends a 0.
+.sp
+.SH SEE ALSO
+.I printf(3)
 .I _putchar.c
-	.SH NOTES
-	_printf uses a custom character printing function called _putchar, that uses the system call write(). 
-	_putchar uses a static buffer of 1024 bytes and a static incrementing variable. 
-	That way, everytime _putchar is called inside _printf, the character is stored inside the buffer and the function moves to the next character, 
-	until _printf calls _putchar(-1), which \(dqflushes\(dq the buffer and resets the incrementing variable to 0. 
-	That way, _putchar only needs to call write one time, passing to it the whole buffer and the number of bytes in it, which is given by the value of the incrementing variable.
-	.sp
-	.SH BUGS
-	_printf does not take care of length and precision modifiers yet. For example, _printf(\(dq%hx\(dq) will not produce the same output as the call to the standard library printf.
-	.SH AUTHORS
-	Musandiwa Sinyosi (musasinyoc@gmail.com)
-	| and Ahmed Bouguerba, Cohort 16.
+.SH NOTES
+ _printf uses a custom character printing function called _putchar, that uses the system call write(). 
+ _putchar uses a static buffer of 1024 bytes and a static incrementing variable. 
+ That way, everytime _putchar is called inside _printf, the character is stored inside the buffer and the function moves to the next character, 
+ until _printf calls _putchar(-1), which \(dqflushes\(dq the buffer and resets the incrementing variable to 0. 
+That way, _putchar only needs to call write one time, passing to it the whole buffer and the number of bytes in it, which is given by the value of the incrementing variable.
+.sp
+.SH BUGS
+_printf does not take care of length and precision modifiers yet. For example, _printf(\(dq%hx\(dq) will not produce the same output as the call to the standard library printf.
+.SH AUTHORS
+Sinyosi Musandiwa and Ahmed Bouguerba, Cohort 16.
