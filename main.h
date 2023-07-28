@@ -59,12 +59,6 @@ int (*get_print(char s))(va_list, flags_t *);
 /* get_flag */
 int get_flag(char s, flags_t *f);
 
-/* get_precision */
-int get_precision(const char *format, int *i, va_list list)
-
-/* get_width */
-int get_width(const char *format, int *i, va_list list)
-
 /* print_alpha */
 int print_string(va_list list);
 int print_char(va_list list);
@@ -74,9 +68,9 @@ int _putchar(char c);
 int _puts(char *str);
 
 /* print_custom */
-int print_rot13(va_list l, flags_t *f);
-int print_rev(va_list l, flags_t *f);
-int print_bigS(va_list l, flags_t *f);
+int print_rot13(va_list list, flags_t *f);
+int print_rev(va_list list, flags_t *f);
+int print_bigS(va_list list, flags_t *f);
 
 /* print_address */
 int print_address(va_list list);
